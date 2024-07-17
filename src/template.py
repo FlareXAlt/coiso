@@ -128,7 +128,6 @@ def startTemplate(world, x, y, templat, strat, option=None):
 		if type(response) == int:
 			pixelStack.pop(0)
 			count+=1
-			ctypes.windll.kernel32.SetConsoleTitleW(f"DRACON BOT | {templat} ({(totais-erros)+count}/{totais}) | {round((100*((totais-erros)+count))/totais, 2)}%")
 			if response >= 50:
 				time.sleep(4)
 		elif response == "captcha":
