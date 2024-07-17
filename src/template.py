@@ -57,8 +57,9 @@ def loopPrecense(rpc, templat, start):
 		time.sleep(5)
 
 def updateRich(rpc, templat, strat):
+	"oi"
+	#rpc.update(large_image="logo", large_text=f"{strat}", details=f"Template: {templat}",  state=f"Pixels: ({(totais-erros)+count}/{totais})")
 
-	rpc.update(large_image="logo", large_text=f"{strat}", details=f"Template: {templat}",  state=f"Pixels: ({(totais-erros)+count}/{totais})")
 
 
 def startTemplate(world, x, y, templat, strat, option=None):
