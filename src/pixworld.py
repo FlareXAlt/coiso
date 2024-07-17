@@ -54,15 +54,15 @@ def placePixel(ws, world, x, y, color):
 			break
 		elif data['type'] == "captchaNeeded":
 			printCaptcha()
-			#import requests
+			import requests
 			#"https://api.henrixounez.com/pixworld/captcha.png"
-			#response = requests.get("https://api.henrixounez.com/pixworld/captcha.png")
-			#if response.status_code == 200:
-			#	with open("captcha.png", "wb") as f:
-			#		f.write(response.content)
-			#text = input(">")
-			#data = {"text": text}
-			#requests.post("https://api.henrixounez.com/pixworld/captcha/verify", json=data)
+			response = requests.get("https://api.henrixounez.com/pixworld/captcha.png")
+			if response.status_code == 200:
+				with open("captcha.png", "wb") as f:
+					f.write(response.content)
+			text = input(">")
+			data = {"text": text}
+			requests.post("https://api.henrixounez.com/pixworld/captcha/verify", json=data)
 
 			#ctypes.windll.kernel32.SetConsoleTitleW("DRACON BOT | CAPTCHA")
 			return "captcha"
