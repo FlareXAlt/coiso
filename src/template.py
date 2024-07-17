@@ -64,7 +64,7 @@ def updateRich(rpc, templat, strat):
 def startTemplate(world, x, y, templat, strat, option=None):
 	global totais, erros, count
 	path = os.getcwd()
-	template = Image.open(os.path.dirname(path)+'\\bot\\images\\'+templat)
+	template = Image.open(templat)
 	printGetChunks()
 	canvas = getChunksIds(world, x, y, x+template.width, y+template.height)
 	printCompare()
@@ -72,7 +72,7 @@ def startTemplate(world, x, y, templat, strat, option=None):
 
 	hashG = generateHash()
 
-	f = open(os.path.dirname(path)+'\\bot\\config.json')
+	f = open('config.json')
 	data = json.load(f)
 	account = data["account"]["active"]
 
