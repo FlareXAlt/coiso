@@ -15,7 +15,6 @@ version = 1.0
 # Main
 
 clear()
-ctypes.windll.kernel32.SetConsoleTitleW("DRACON BOT v"+str(version))
 uptodate = checkUpdate(version)
 printDragon()
 
