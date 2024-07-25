@@ -31,11 +31,11 @@ def getAccount(username, password):
 	return token
 
 def placePixel(ws, world, x, y, color):
+	time.sleep(random.uniform(0.2,1))
 	ws.send('{"type":"placePixel","data":{"x":%s,"y":%s,"color":"%s","canvas":"%s"}}' % (x,y,color,world))
 	global captcha
 	while True:
 		data = json.loads(ws.recv())
-		time.sleep(random.uniform(0.2,1))
 		if data["type"] == 'confirmPixel':
 			printPixel(x, y, color)
 			cd = 30
